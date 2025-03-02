@@ -7,12 +7,10 @@
     transition: all 0.3s ease;
 }
 
-html,
 body {
-    min-height: 100%;
+    font-family: 'Poppins', sans-serif;
     background: #0d0d0d;
     color: #ffffff;
-    font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -60,12 +58,12 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 120px 20px;
-    background: url('https://source.unsplash.com/1600x900/?cyber,security') no-repeat center center/cover;
+    background: url('https://source.unsplash.com/1600x900/?cyber,team') no-repeat center center/cover;
 }
 
 .hero h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
     color: #ffffff;
@@ -81,76 +79,50 @@ nav ul li a:hover {
     color: #cfcfcf;
 }
 
-.hero .btn {
-    padding: 14px 28px;
-    background: #06CACF;
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 5px;
-    box-shadow: 0 0 12px rgba(11, 82, 50, 0.3);
-}
-
-.hero .btn:hover {
-    background: #04686D;
-    color: #fff;
-}
-
-.hero-cards {
+.team-list {
     display: flex;
     justify-content: center;
-    gap: 100px;
-    margin-top: 100px;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
 }
 
-.card {
-    width: 300px;
-    padding: 30px 20px;
-    text-align: center;
-    position: relative;
+.team-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
+    width: 220px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, background 0.3s;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card h3 {
-    font-size: 20px;
-    font-weight: 600;
+.team-card img {
+    width: 100%;
+    border-radius: 50%;
     margin-bottom: 15px;
 }
 
-.card p {
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    color: #e0e0e0;
+.team-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-.card .btn {
-    background: #06CACF;
-    color: #000;
-    border-radius: 6px;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-weight: 500;
+.team-card p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 0;
 }
 
-.card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.card .btn:hover {
-    background: #04686D;
-    color: #fff;
+.team-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 768px) {
     header {
-        padding: 20px 30px;
+        padding: 15px 20px;
     }
     nav ul li {
         margin-left: 20px;
@@ -159,16 +131,13 @@ nav ul li a:hover {
         padding: 80px 20px;
     }
     .hero h1 {
-        font-size: 36px;
+        font-size: 30px;
     }
-    .hero-cards {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        margin-top: 60px;
+    .team-list {
+        gap: 10px;
     }
-    .card {
-        width: 85%;
-        margin: 0 auto;
+    .team-card {
+        width: 80%;
+        margin-bottom: 20px;
     }
 }
